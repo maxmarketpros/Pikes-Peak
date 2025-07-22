@@ -7,31 +7,46 @@ export function PricingTable() {
       {[
         {
           title: "Large Ad",
-          deposit: "$300",
+          dimensions: "4\" x 6\"",
+          price: "$850",
+          originalPrice: "$900",
+          deposit: "$300 deposit",
+          multiCardDiscount: "$50 OFF with multi-card",
           features: [
             "Premium placement",
-            "Maximum visibility",
-            "Includes 5,000 flyers",
+            "Maximum visibility", 
+            "Includes 3,000 flyers",
             "Professional design assistance",
           ],
           popular: true,
         },
         {
           title: "Medium Ad",
-          deposit: "$200",
+          dimensions: "3\" x 4\"",
+          price: "$425",
+          originalPrice: "$450",
+          deposit: "$200 deposit",
+          multiCardDiscount: "$25 OFF with multi-card",
           features: ["Great visibility", "Effective size", "Professional design assistance", "Affordable option"],
           popular: false,
         },
         {
           title: "Small Ad",
-          deposit: "$100",
+          dimensions: "3\" x 2\"",
+          price: "$225",
+          originalPrice: "$250",
+          deposit: "$100 deposit",
+          multiCardDiscount: "$25 OFF with multi-card",
           features: ["Budget-friendly", "Professional design assistance", "Targeted distribution", "Quick turnaround"],
           popular: false,
         },
         {
           title: "Directory Ad",
-          deposit: "$125",
-          discount: "$115 w/ discount",
+          dimensions: "3/4\" x 3\"",
+          price: "$115",
+          originalPrice: "$125",
+          deposit: "Pay in full",
+          multiCardDiscount: "$10 OFF with multi-card",
           features: [
             "Seasonal availability",
             "Professional design assistance",
@@ -47,10 +62,14 @@ export function PricingTable() {
           )}
           <CardContent className={`p-6 ${plan.popular ? "pt-4" : "pt-6"}`}>
             <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
+            <p className="text-lg mb-2 text-muted-foreground">{plan.dimensions}</p>
             <div className="mb-4">
-              <div className="text-3xl font-bold">{plan.deposit}</div>
-              <p className="text-muted-foreground">deposit, balance due at print</p>
-              {plan.discount && <p className="text-sm font-medium text-primary mt-1">{plan.discount}</p>}
+              <div className="text-3xl font-bold">{plan.price}</div>
+              <p className="text-sm line-through text-muted-foreground">{plan.originalPrice}</p>
+              <p className="text-muted-foreground text-sm mt-1">{plan.deposit}</p>
+              <div className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium mt-2">
+                {plan.multiCardDiscount}
+              </div>
             </div>
             <ul className="space-y-2 mb-4">
               {plan.features.map((feature, j) => (

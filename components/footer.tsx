@@ -16,28 +16,37 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-4 pt-2">
               <Button
+                asChild
                 variant="outline"
                 size="icon"
                 className="rounded-full border-white/20 hover:bg-white/10 bg-transparent"
               >
-                <Mail className="h-4 w-4" />
-                <span className="sr-only">Email</span>
+                <Link href="mailto:Ad.PPCC9x12@gmail.com">
+                  <Mail className="h-4 w-4" />
+                  <span className="sr-only">Email</span>
+                </Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="icon"
                 className="rounded-full border-white/20 hover:bg-white/10 bg-transparent"
               >
-                <Phone className="h-4 w-4" />
-                <span className="sr-only">Phone</span>
+                <Link href="tel:7192105182">
+                  <Phone className="h-4 w-4" />
+                  <span className="sr-only">Phone</span>
+                </Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="icon"
                 className="rounded-full border-white/20 hover:bg-white/10 bg-transparent"
               >
-                <Share2 className="h-4 w-4" />
-                <span className="sr-only">Share</span>
+                <Link href="#contact">
+                  <Share2 className="h-4 w-4" />
+                  <span className="sr-only">Share</span>
+                </Link>
               </Button>
             </div>
           </div>
@@ -60,11 +69,7 @@ export function Footer() {
                   Pricing
                 </Link>
               </li>
-              <li>
-                <Link href="#samples" className="text-white/70 hover:text-white transition-colors">
-                  Samples
-                </Link>
-              </li>
+
               <li>
                 <Link href="#contact" className="text-white/70 hover:text-white transition-colors">
                   Contact
@@ -77,27 +82,27 @@ export function Footer() {
             <h3 className="text-lg font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
                   9x12-Inch Postcards
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
                   6x11-Inch Postcards
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
                   15x12-Inch Tabloid
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
                   11x17-Inch Directory
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                <Link href="#contact" className="text-white/70 hover:text-white transition-colors">
                   Ad Design Services
                 </Link>
               </li>

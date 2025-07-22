@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Calendar, CheckCircle } from "lucide-react"
@@ -56,9 +57,10 @@ export function CampaignPackages() {
           </CardContent>
           <CardFooter className="p-6 pt-0">
             <Button
+              asChild
               className={`w-full ${plan.popular ? "bg-primary hover:bg-primary/90" : "bg-white/10 hover:bg-white/20"}`}
             >
-              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+              <Link href="#contact">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </CardFooter>
         </Card>

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -38,8 +39,8 @@ export default function Home() {
                 Get Seen by 10,000+ Homes Across Colorado Springs With Our Stunning 9x12 Postcards
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-                  Get a Quote
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
+                  <Link href="#contact">Get a Quote</Link>
                 </Button>
                 <Button
                   size="lg"
@@ -53,8 +54,8 @@ export default function Home() {
             <div className="relative">
               <div className="relative transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <img
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="9x12 Postcard Example"
+                  src="/images/15x12cardwithads.jpg"
+                  alt="15x12 Postcard Example"
                   className="rounded-md shadow-2xl"
                 />
               </div>
@@ -97,7 +98,7 @@ export default function Home() {
               },
               {
                 icon: <Mail className="h-10 w-10 text-primary" />,
-                title: "5,000 Bonus Flyers",
+                title: "3,000 Bonus Flyers",
                 description: "Included with select ad packages",
               },
               {
@@ -121,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* Postcard Options */}
-      <section className="py-20 bg-charcoal text-off-white">
+      <section id="postcards" className="py-20 bg-charcoal text-off-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Postcard Options</h2>
@@ -181,15 +182,15 @@ export default function Home() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Includes 5,000 bonus flyers</span>
+                      <span>Includes 3,000 bonus flyers</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
                       <span>Premium glossy finish</span>
                     </li>
                   </ul>
-                  <Button className="bg-primary hover:bg-primary/90 text-white mt-4">
-                    Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button asChild className="bg-primary hover:bg-primary/90 text-white mt-4">
+                    <Link href="#contact">Get a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>
@@ -224,8 +225,8 @@ export default function Home() {
                       <span>High-quality glossy finish</span>
                     </li>
                   </ul>
-                  <Button className="bg-primary hover:bg-primary/90 text-white mt-4">
-                    Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button asChild className="bg-primary hover:bg-primary/90 text-white mt-4">
+                    <Link href="#contact">Get a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>
@@ -314,7 +315,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Overview */}
-      <section className="py-20 bg-off-white">
+      <section id="pricing" className="py-20 bg-off-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Pricing Overview</h2>
@@ -327,12 +328,115 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-lg font-medium mb-6">
-              All 9x12 ads include 5,000 flyers delivered directly to you for further outreach.
+              All 9x12 ads include 3,000 flyers delivered directly to you for further outreach.
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-              Get Started Today
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
+              <Link href="#contact">Get Started Today</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+
+
+      {/* Payment & Campaign Info */}
+      <section className="py-20 bg-off-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
+            <p className="text-xl max-w-3xl mx-auto">
+              Pick the ad size that suits your style! Discounts are set with our current promotions—go for a single ad or jazz up a 3-card, 6-card, or 12-card campaign.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+            {/* Deposit Structure */}
+            <Card className="shadow-lg">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6 text-center">No Contracts, Just Small Deposits</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                    <span className="font-semibold">Large Ad (4" x 6")</span>
+                    <span className="text-lg font-bold text-primary">$300 deposit</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                    <span className="font-semibold">Medium Ad (3" x 4")</span>
+                    <span className="text-lg font-bold text-primary">$200 deposit</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                    <span className="font-semibold">Small Ad (3" x 2")</span>
+                    <span className="text-lg font-bold text-primary">$100 deposit</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-pink-50 rounded-lg">
+                    <span className="font-semibold">Directory Ad (3/4" x 3")</span>
+                    <span className="text-lg font-bold text-primary">Pay in full</span>
+                  </div>
+                </div>
+                <p className="text-center mt-4 text-muted-foreground">
+                  Balance due at printing for all ads except Directory
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Multi-Card Campaigns */}
+            <Card className="shadow-lg">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6 text-center">Multi-Card Campaigns</h3>
+                <div className="space-y-4">
+                  <div className="bg-gradient-to-r from-primary/10 to-primary/20 p-6 rounded-lg">
+                    <h4 className="font-bold text-lg mb-2">How Multi-Card Works:</h4>
+                    <ol className="space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</span>
+                        <span>Add a $100 deposit to secure your spot for the next card</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</span>
+                        <span>When each postcard is ready to print, you'll get an invoice for the ad price minus the $100 retainer</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</span>
+                        <span>To continue the next card it's wash, rinse, repeat, easy peasy!</span>
+                      </li>
+                    </ol>
+                  </div>
+                  <div className="text-center">
+                    <p className="font-semibold text-primary">Choose from:</p>
+                    <div className="flex justify-center gap-4 mt-2">
+                      <span className="bg-primary/10 px-3 py-1 rounded-full text-sm font-medium">3-Card</span>
+                      <span className="bg-primary/10 px-3 py-1 rounded-full text-sm font-medium">6-Card</span>
+                      <span className="bg-primary/10 px-3 py-1 rounded-full text-sm font-medium">12-Card</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Refund Policy */}
+          <Card className="shadow-lg bg-gradient-to-r from-green-50 to-blue-50">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center">Our Refund Policy is Nice and Easy!</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="text-center">
+                  <div className="bg-green-100 p-6 rounded-lg mb-4">
+                    <h4 className="font-bold text-lg mb-2 text-green-800">If You Cancel</h4>
+                    <p className="text-green-700">
+                      You can request a refund before your postcard hits the printer. We'll refund <strong>75% of your deposit</strong> or purchase—keeping 25% to cover the design work done by the Pikes Peak Community Co-op.
+                    </p>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="bg-blue-100 p-6 rounded-lg mb-4">
+                    <h4 className="font-bold text-lg mb-2 text-blue-800">If We Cancel</h4>
+                    <p className="text-blue-700">
+                      But if we cancel for any reason, you'll get a cheerful <strong>100% refund!</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -356,7 +460,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/placeholder.svg?height=500&width=700"
+                src="/images/Shareandsave.jpg"
                 alt="Referral Program"
                 className="rounded-lg shadow-xl"
               />
@@ -367,9 +471,29 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-bold">Share and Save</h2>
               </div>
               <p className="text-xl">
-                Refer a business and receive up to $100 credit on your next campaign. The more you refer, the more you
-                save.
+                Refer a business and earn cash bonuses with NO LIMIT on referrals! Get paid for every business you bring to our co-op.
               </p>
+              
+              <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-lg shadow-lg mb-6">
+                <h3 className="text-2xl font-bold mb-4 text-center">REFERRAL BONUS!</h3>
+                <div className="space-y-2 text-lg font-semibold">
+                  <div className="flex justify-between items-center">
+                    <span>Large Ad (4" x 6") purchased:</span>
+                    <span className="text-yellow-300 text-xl">$75</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Medium Ad (3" x 4") purchased:</span>
+                    <span className="text-yellow-300 text-xl">$50</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Small Ad (3" x 2") purchased:</span>
+                    <span className="text-yellow-300 text-xl">$20</span>
+                  </div>
+                </div>
+                <div className="text-center mt-4">
+                  <p className="text-2xl font-bold text-yellow-300">NO LIMIT ON REFERRALS!</p>
+                </div>
+              </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-4">How It Works</h3>
@@ -395,7 +519,9 @@ export default function Home() {
                 </ol>
               </div>
 
-              <Button className="bg-primary hover:bg-primary/90 text-white">Start Referring Today</Button>
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white">
+                <Link href="#contact">Start Referring Today</Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -462,19 +588,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-20 bg-off-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Work</h2>
-            <p className="text-xl max-w-2xl mx-auto">
-              Examples of successful campaigns we've created for local businesses
-            </p>
-          </div>
 
-          <PostcardGallery />
-        </div>
-      </section>
 
       {/* About Us */}
       <section className="py-20 bg-charcoal text-off-white">
@@ -515,7 +629,7 @@ export default function Home() {
       </section>
 
       {/* Contact & CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-charcoal to-charcoal/90 text-off-white">
+      <section id="contact" className="py-20 bg-gradient-to-br from-charcoal to-charcoal/90 text-off-white scroll-mt-32">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -550,7 +664,7 @@ export default function Home() {
             <div>
               <Card className="bg-white text-charcoal">
                 <CardContent className="pt-6">
-                  <h3 className="text-2xl font-bold mb-4">Get a Quote</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-center">Get a Quote</h3>
                   <ContactForm />
                 </CardContent>
               </Card>

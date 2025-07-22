@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Menu, Phone } from "lucide-react"
 
 export function Header() {
@@ -13,18 +13,19 @@ export function Header() {
     { label: "Home", href: "/" },
     { label: "Postcards", href: "#postcards" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Samples", href: "#samples" },
     { label: "Contact", href: "#contact" },
   ]
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-24 md:h-32 items-center justify-between">
         <div className="flex items-center gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-2xl">
-              <span className="text-primary">Pikes Peak</span> Co-op
-            </span>
+          <Link href="/" className="flex items-center">
+            <img 
+              src="/images/Logo.png" 
+              alt="Pikes Peak Co-op" 
+              className="h-20 md:h-28 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex gap-6">
@@ -56,11 +57,14 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col gap-6 pt-6">
-                <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
-                  <span className="font-bold text-xl">
-                    <span className="text-primary">Pikes Peak</span> Co-op
-                  </span>
+                <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
+                  <img 
+                    src="/images/Logo.png" 
+                    alt="Pikes Peak Co-op" 
+                    className="h-12 w-auto"
+                  />
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navItems.map((item, i) => (
