@@ -61,8 +61,8 @@ export function PricingTable() {
             <div className="bg-primary text-white py-1.5 px-3 text-center text-sm font-medium">Most Popular</div>
           )}
           <CardContent className={`p-6 ${plan.popular ? "pt-4" : "pt-6"}`}>
-            <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
-            <p className="text-lg mb-2 text-muted-foreground">{plan.dimensions}</p>
+            <h3 className="text-xl font-bold mb-1">{plan.title}</h3>
+            <p className="text-lg font-medium text-primary mb-3">{plan.dimensions}</p>
             <div className="mb-4">
               <div className="text-3xl font-bold">{plan.price}</div>
               <p className="text-sm line-through text-muted-foreground">{plan.originalPrice}</p>
