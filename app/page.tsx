@@ -21,6 +21,7 @@ import { PricingTable } from "@/components/pricing-table"
 import { FaqAccordion } from "@/components/faq-accordion"
 import { ContactForm } from "@/components/contact-form"
 import { CampaignPackages } from "@/components/campaign-packages"
+import { WhyGiantPostcards } from "@/components/why-giant-postcards"
 
 export default function Home() {
   return (
@@ -543,7 +544,8 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* Why Giant Postcards Outperform */}
+      <WhyGiantPostcards />
 
       {/* About Us */}
       <section className="py-20 bg-charcoal text-off-white">
