@@ -1,0 +1,18 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#B00020"/>
+  
+  <!-- Mail envelope -->
+  <rect x="25" y="50" width="130" height="80" rx="8" fill="white" stroke="none"/>
+  
+  <!-- Envelope flap -->
+  <path d="M25 60 L90 105 L155 60" stroke="#B00020" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Mail lines (representing text) -->
+  <rect x="40" y="75" width="50" height="6" fill="#B00020" opacity="0.6"/>
+  <rect x="40" y="90" width="70" height="6" fill="#B00020" opacity="0.6"/>
+  <rect x="40" y="105" width="40" height="6" fill="#B00020" opacity="0.6"/>
+  
+  <!-- Small mail indicator dot -->
+  <circle cx="140" cy="40" r="8" fill="#FFD700"/>
+</svg>

@@ -1,0 +1,26 @@
+<!-- This is a placeholder - you should replace this with an actual 1200x630 JPG image -->
+<!-- For now, I'll create an SVG that can be converted to JPG -->
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#2D2D2D"/>
+  <rect x="50" y="100" width="500" height="300" rx="20" fill="white"/>
+  <rect x="70" y="120" width="460" height="260" rx="10" fill="#B00020"/>
+  
+  <!-- Main Text -->
+  <text x="600" y="200" fill="white" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Your Billboard</text>
+  <text x="600" y="260" fill="#FFD700" font-family="Arial, sans-serif" font-size="48" font-weight="bold">in a Mailbox</text>
+  <text x="600" y="320" fill="white" font-family="Arial, sans-serif" font-size="24">Get seen by 10,000+ homes across Colorado Springs</text>
+  <text x="600" y="360" fill="white" font-family="Arial, sans-serif" font-size="24">with our stunning 9x12 postcards</text>
+  
+  <!-- Logo/Brand -->
+  <text x="600" y="450" fill="#FFD700" font-family="Arial, sans-serif" font-size="32" font-weight="bold">Pikes Peak Community Co-op</text>
+  <text x="600" y="490" fill="white" font-family="Arial, sans-serif" font-size="20">Direct Mail Marketing • Colorado Springs</text>
+  
+  <!-- Postcard representation -->
+  <text x="300" y="280" fill="white" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle">9×12</text>
+  <text x="300" y="320" fill="#FFD700" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">POSTCARD</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="1050" cy="150" r="40" fill="#FFD700"/>
+  <circle cx="1100" cy="200" r="25" fill="#B00020"/>
+  <circle cx="1000" cy="220" r="30" fill="white"/>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "name": "Pikes Peak Community Co-op",
+  "short_name": "Pikes Peak Co-op",
+  "description": "Direct mail marketing services in Colorado Springs. Get seen by 10,000+ homes with our 9x12 postcards.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2D2D2D",
+  "theme_color": "#B00020",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/favicon32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/apple-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "marketing", "local"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
