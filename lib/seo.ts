@@ -24,7 +24,7 @@ export const siteConfig = {
 
 export const defaultMetadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: "Direct Mail Marketing in Colorado Springs | Pikes Peak Co-op",
     template: `%s | ${siteConfig.name}`
   },
   description: siteConfig.description,
