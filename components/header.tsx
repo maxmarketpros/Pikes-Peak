@@ -22,22 +22,29 @@ export function Header() {
     },
     { 
       label: "Postcards", 
-      href: "#postcards",
+      href: "/#postcards",
       description: "Explore our postcard designs",
       icon: Sparkles,
       color: "from-purple-500 to-pink-600",
       featured: true
     },
     { 
+      label: "Blog", 
+      href: "/blog",
+      description: "Read our latest insights",
+      icon: Star,
+      color: "from-indigo-500 to-purple-600"
+    },
+    { 
       label: "Pricing", 
-      href: "#pricing",
+      href: "/#pricing",
       description: "Transparent, competitive rates",
       icon: DollarSign,
       color: "from-blue-500 to-cyan-600"
     },
     { 
       label: "Contact", 
-      href: "#contact",
+      href: "/#contact",
       description: "Get in touch with our team",
       icon: Mail,
       color: "from-orange-500 to-red-600"
@@ -138,7 +145,7 @@ export function Header() {
             asChild 
             className="hidden md:flex bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 group relative overflow-hidden px-8 py-3 h-12 rounded-2xl"
           >
-            <Link href="#contact" className="flex items-center gap-3">
+            <Link href="/#contact" className="flex items-center gap-3">
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
               <Zap className="h-5 w-5 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 relative z-10" />
               <span className="font-bold relative z-10">Get a Quote</span>
@@ -205,7 +212,7 @@ export function Header() {
                     asChild 
                     className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-xl hover:shadow-2xl transition-all duration-500 group h-14 rounded-2xl"
                   >
-                    <Link href="#contact" onClick={() => setIsOpen(false)} className="flex items-center justify-center gap-3">
+                    <Link href="/#contact" onClick={() => setIsOpen(false)} className="flex items-center justify-center gap-3">
                       <Zap className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                       <span className="font-bold text-lg">Get a Quote</span>
                     </Link>
