@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="bg-charcoal text-off-white">
       <div className="container py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-bold">
               <span className="text-primary">Pikes Peak</span> Community Co-op
@@ -73,37 +73,6 @@ export function Footer() {
               <li>
                 <Link href="#contact" className="text-white/70 hover:text-white transition-colors">
                   Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
-                  9x12-Inch Postcards
-                </Link>
-              </li>
-              <li>
-                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
-                  6x11-Inch Postcards
-                </Link>
-              </li>
-              <li>
-                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
-                  15x12-Inch Tabloid
-                </Link>
-              </li>
-              <li>
-                <Link href="#postcards" className="text-white/70 hover:text-white transition-colors">
-                  11x17-Inch Directory
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="text-white/70 hover:text-white transition-colors">
-                  Ad Design Services
                 </Link>
               </li>
             </ul>

@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -15,7 +18,9 @@ import {
   Users,
   Calendar,
   Award,
+  Play,
 } from "lucide-react"
+import { YouTubeModal } from "@/components/youtube-modal"
 import { PostcardGallery } from "@/components/postcard-gallery"
 import { PricingTable } from "@/components/pricing-table"
 import { FaqAccordion } from "@/components/faq-accordion"
@@ -24,46 +29,129 @@ import { CampaignPackages } from "@/components/campaign-packages"
 import { WhyGiantPostcards } from "@/components/why-giant-postcards"
 
 export default function Home() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+
   return (
     <main className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-charcoal text-off-white py-20 md:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-charcoal/80 z-10"></div>
-        <div className="absolute inset-0 bg-[url('/images/postcard-pattern.png')] opacity-20 z-0"></div>
-        <div className="container relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+      {/* Modern Hero Section */}
+      <section className="relative min-h-screen bg-gradient-to-br from-charcoal via-slate-800 to-charcoal text-off-white overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-slate-800 to-slate-900"></div>
+        
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,215,0,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(176,0,32,0.03)_49%,rgba(176,0,32,0.03)_51%,transparent_52%)] bg-[length:60px_60px]"></div>
+        </div>
+
+        <div className="container relative z-20 flex items-center min-h-screen py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+            
+            {/* Left Column - Copy & CTAs */}
+            <div className="space-y-8 hero-content">
+              {/* Main Heading */}
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight hero-headline">
+                  Direct Mail Marketing in Colorado Springs
+                </h1>
+                <p className="text-xl md:text-2xl font-light text-gray-300 hero-subline">
+                  Reach 10,000+ homes with giant postcards that dominate the mailbox.
+                </p>
+              </div>
+
+              {/* Secondary Heading */}
+              <h2 className="text-3xl md:text-4xl font-bold text-off-white hero-secondary">
                 Your <span className="text-accent-gold">Billboard</span> in a Mailbox
-              </h1>
-              <p className="text-xl md:text-2xl font-light">
-                Get Seen by 10,000+ Homes Across Colorado Springs With Our Stunning 9x12 Postcards
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
+              </h2>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-6 hero-ctas">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-primary hover:bg-red-700 text-white font-bold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                >
                   <Link href="#contact">Get a Quote</Link>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10 bg-transparent"
+                  className="border-2 border-white text-white hover:bg-white hover:text-charcoal bg-transparent font-bold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
                 >
-                  <Phone className="mr-2 h-4 w-4" /> Call (719) 210-5182
+                  <Link href="tel:7192105182">
+                    <Phone className="mr-2 h-5 w-5" /> Call (719) 210-5182
+                  </Link>
                 </Button>
               </div>
-            </div>
-            <div className="relative">
-              <div className="relative transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <img
-                  src="/images/15x12cardwithads.jpg"
-                  alt="15x12 Postcard Example"
-                  className="rounded-md shadow-2xl"
-                />
+
+              {/* Trust Row */}
+              <div className="flex flex-wrap items-center gap-6 pt-8 text-sm font-medium text-gray-300 hero-trust">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-accent-gold" />
+                  <span>No Contracts</span>
+                </div>
+                <div className="hidden sm:block w-px h-4 bg-gray-600"></div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-accent-gold" />
+                  <span>Exclusive Categories</span>
+                </div>
+                <div className="hidden sm:block w-px h-4 bg-gray-600"></div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-accent-gold" />
+                  <span>Local Experts</span>
+                </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg transform rotate-6">
-                <p className="font-bold text-lg">Dominates the Mailbox!</p>
+            </div>
+
+            {/* Right Column - Tilted Postcard */}
+            <div className="relative flex items-center justify-center hero-visual">
+              <div className="relative postcard-container">
+                {/* Main Postcard with Tilt & Shadow */}
+                <div className="relative transform rotate-6 hover:rotate-3 transition-all duration-700 ease-out hover:scale-105 postcard-main">
+                  <div className="relative bg-white rounded-xl p-2 shadow-2xl">
+                    <img
+                      src="/images/15x12cardwithads.jpg"
+                      alt="Giant Postcard Example - Dominates the Mailbox"
+                      className="w-full h-auto rounded-lg"
+                      loading="eager"
+                    />
+                    
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center rounded-lg z-10 pointer-events-none">
+                      <button
+                        onClick={() => setIsVideoModalOpen(true)}
+                        className="group relative bg-white/90 backdrop-blur-sm hover:bg-white rounded-full p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 play-button pointer-events-auto"
+                        style={{ transform: 'rotate(-6deg)' }}
+                        aria-label="Play video about our postcard marketing"
+                      >
+                        <Play className="h-12 w-12 text-primary group-hover:text-red-700 transition-colors duration-300 ml-1" fill="currentColor" />
+                        
+                        {/* Animated Ring */}
+                        <div className="absolute inset-0 rounded-full border-4 border-primary/30 animate-ping"></div>
+                        <div className="absolute inset-0 rounded-full border-2 border-primary/50"></div>
+                        
+                        {/* Hover Glow */}
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+                      </button>
+                    </div>
+
+                    {/* Subtle Glow Effect */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-transparent to-accent-gold/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  {/* Floating Drop Shadow */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent-gold/20 rounded-xl blur-2xl opacity-60 -z-10 transform translate-y-8 scale-110"></div>
+                </div>
+
+                {/* Animated Sticker Badge */}
+                <div className="absolute -bottom-8 -right-8 bg-primary text-white px-6 py-4 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 sticker-badge hover:scale-105">
+                  <p className="font-bold text-lg whitespace-nowrap">Dominates the Mailbox!</p>
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -629,6 +717,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* YouTube Modal */}
+      <YouTubeModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoId="9LLsG1UHr2E"
+        startTime={0}
+      />
     </main>
   )
 }
