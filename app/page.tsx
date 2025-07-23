@@ -121,196 +121,151 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Postcard Options */}
-      <section id="postcards" className="py-20 bg-charcoal text-off-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Postcard Options</h2>
-            <p className="text-xl max-w-2xl mx-auto">Choose the perfect size to make your business stand out</p>
+      {/* Postcard Options - Tech Showroom */}
+      <section id="postcards" className="relative py-20 bg-gradient-to-br from-gray-900 via-charcoal to-gray-800 text-off-white overflow-hidden">
+        {/* Subtle tech pattern background */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,215,0,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(176,0,32,0.05)_49%,rgba(176,0,32,0.05)_51%,transparent_52%)] bg-[length:20px_20px]"></div>
+        </div>
+        
+        <div className="container relative z-10">
+          {/* Section Header with Parallax */}
+          <div className="text-center mb-16 opacity-0 translate-y-4 animate-fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-off-white via-accent-gold to-off-white bg-clip-text text-transparent">
+              Postcard Showroom
+            </h2>
+            <p className="text-xl max-w-2xl mx-auto text-gray-300">
+              One flagship size. More room for results. Explore the specs.
+            </p>
           </div>
 
-          <Tabs defaultValue="9x12" className="w-full">
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-transparent h-auto mb-8">
-              <TabsTrigger
-                value="9x12"
-                className="data-[state=active]:bg-primary data-[state=active]:text-white py-3 px-4 rounded-md"
-              >
-                9x12-Inch
-              </TabsTrigger>
-              <TabsTrigger
-                value="6x11"
-                className="data-[state=active]:bg-primary data-[state=active]:text-white py-3 px-4 rounded-md"
-              >
-                6x11-Inch
-              </TabsTrigger>
-              <TabsTrigger
-                value="15x12"
-                className="data-[state=active]:bg-primary data-[state=active]:text-white py-3 px-4 rounded-md"
-              >
-                15x12-Inch
-              </TabsTrigger>
-              <TabsTrigger
-                value="11x17"
-                className="data-[state=active]:bg-primary data-[state=active]:text-white py-3 px-4 rounded-md"
-              >
-                11x17-Inch
-              </TabsTrigger>
-            </TabsList>
+          {/* Hero Size Pill */}
+          <div className="flex justify-center mb-12">
+            <button className="size-pill-hero group relative px-12 py-6 rounded-full border-4 border-primary bg-gradient-to-r from-primary via-red-600 to-red-700 text-white font-bold text-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 animate-glow-pulse hover:scale-110">
+              <span className="relative z-10 drop-shadow-lg">9×12 Inch Premium</span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-gold/30 to-yellow-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-primary/50 to-red-700/50 blur-lg opacity-60 animate-pulse"></div>
+            </button>
+          </div>
 
-            <TabsContent value="9x12" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
+          {/* Hero Postcard Display */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            {/* 3D Tilt Postcard */}
+            <div className="relative">
+              <div className="postcard-3d group relative transform-gpu transition-all duration-500 ease-out hover:scale-105">
+                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 shadow-2xl border border-gray-700">
                   <img
-                    src="/placeholder.svg?height=500&width=700"
-                    alt="9x12-Inch Postcard"
-                    className="rounded-lg shadow-xl"
+                    src="/images/Postcard9x12.png"
+                    alt="9×12 Inch Postcard Mockup"
+                    className="w-full h-auto rounded-lg shadow-lg"
+                    loading="lazy"
                   />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-transparent to-accent-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="space-y-6">
-                  <div className="inline-block bg-primary px-4 py-2 rounded-md text-white font-bold mb-2">
-                    FLAGSHIP PRODUCT
+                
+                {/* Floating Shadow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent-gold/20 rounded-xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500 -z-10 transform translate-y-4"></div>
+              </div>
+              
+              {/* GO-TO SIZE Badge */}
+              <div className="absolute -top-4 -left-4 bg-gradient-to-r from-white to-primary text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg transform -rotate-6 animate-slide-in-left">
+                GO-TO SIZE
+              </div>
+            </div>
+
+            {/* Specs and Details */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-accent-gold bg-clip-text text-transparent">
+                  9×12 Inch Postcard
+                </h3>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  Our flagship format dominates the mailbox with maximum visual impact. This premium size ensures your message commands attention and provides ample space for compelling offers.
+                </p>
+              </div>
+
+              {/* Animated Spec Icons */}
+              <ul className="space-y-4">
+                <li className="flex items-center group">
+                  <div className="spec-icon mr-4 p-2 rounded-full bg-gradient-to-r from-accent-gold to-yellow-500 transform transition-all duration-200 group-hover:scale-110 group-hover:rotate-12">
+                    <CheckCircle className="h-5 w-5 text-charcoal animate-pop-in" />
                   </div>
-                  <h3 className="text-3xl font-bold">9x12-Inch Postcard</h3>
-                  <p className="text-lg">
-                    Our most popular size that dominates the mailbox. This eye-catching format ensures your message
-                    won't be missed and provides ample space for compelling offers and stunning visuals.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Maximum visibility in the mailbox</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Includes 3,000 bonus flyers</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Premium glossy finish</span>
-                    </li>
-                  </ul>
-                  <Button asChild className="bg-primary hover:bg-primary/90 text-white mt-4">
-                    <Link href="#contact">Get a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                  </Button>
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="6x11" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <img
-                    src="/placeholder.svg?height=500&width=700"
-                    alt="6x11-Inch Postcard"
-                    className="rounded-lg shadow-xl"
-                  />
-                </div>
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-bold">6x11-Inch Postcard</h3>
-                  <p className="text-lg">
-                    Compact but bold, this size offers excellent visibility while maintaining a sleek profile. Perfect
-                    for focused messaging and special promotions.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Efficient size with strong presence</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Cost-effective option</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>High-quality glossy finish</span>
-                    </li>
-                  </ul>
-                  <Button asChild className="bg-primary hover:bg-primary/90 text-white mt-4">
-                    <Link href="#contact">Get a Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                  </Button>
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="15x12" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <img
-                    src="/placeholder.svg?height=500&width=700"
-                    alt="15x12-Inch Tabloid"
-                    className="rounded-lg shadow-xl"
-                  />
-                </div>
-                <div className="space-y-6">
-                  <div className="inline-block bg-accent-gold px-4 py-2 rounded-md text-charcoal font-bold mb-2">
-                    EXTRA IMPACT
+                  <span className="text-lg text-gray-200">Maximum mailbox visibility</span>
+                </li>
+                <li className="flex items-center group">
+                  <div className="spec-icon mr-4 p-2 rounded-full bg-gradient-to-r from-accent-gold to-yellow-500 transform transition-all duration-200 group-hover:scale-110 group-hover:rotate-12">
+                    <CheckCircle className="h-5 w-5 text-charcoal animate-pop-in" style={{animationDelay: '0.1s'}} />
                   </div>
-                  <h3 className="text-3xl font-bold">15x12-Inch Tabloid</h3>
-                  <p className="text-lg">
-                    Make an oversized statement with our tabloid format. This premium size offers maximum visual impact
-                    and space for detailed information, perfect for businesses wanting to showcase multiple services or
-                    products.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Oversized for maximum impact</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Ample space for detailed content</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Premium quality and finish</span>
-                    </li>
-                  </ul>
-                  <Button className="bg-primary hover:bg-primary/90 text-white mt-4">
-                    Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="11x17" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <img
-                    src="/placeholder.svg?height=500&width=700"
-                    alt="11x17-Inch Directory"
-                    className="rounded-lg shadow-xl"
-                  />
-                </div>
-                <div className="space-y-6">
-                  <div className="inline-block bg-charcoal/30 px-4 py-2 rounded-md text-white font-bold mb-2">
-                    SEASONAL
+                  <span className="text-lg text-gray-200">Includes 3,000 bonus flyers</span>
+                </li>
+                <li className="flex items-center group">
+                  <div className="spec-icon mr-4 p-2 rounded-full bg-gradient-to-r from-accent-gold to-yellow-500 transform transition-all duration-200 group-hover:scale-110 group-hover:rotate-12">
+                    <CheckCircle className="h-5 w-5 text-charcoal animate-pop-in" style={{animationDelay: '0.2s'}} />
                   </div>
-                  <h3 className="text-3xl font-bold">11x17-Inch Directory</h3>
-                  <p className="text-lg">
-                    Our directory format is perfect for seasonal campaigns and special events. This versatile size
-                    offers excellent visibility and impact for time-sensitive promotions.
+                  <span className="text-lg text-gray-200">Premium glossy finish</span>
+                </li>
+                <li className="flex items-center group">
+                  <div className="spec-icon mr-4 p-2 rounded-full bg-gradient-to-r from-accent-gold to-yellow-500 transform transition-all duration-200 group-hover:scale-110 group-hover:rotate-12">
+                    <CheckCircle className="h-5 w-5 text-charcoal animate-pop-in" style={{animationDelay: '0.3s'}} />
+                  </div>
+                  <span className="text-lg text-gray-200">Reaches 10,000+ homes</span>
+                </li>
+              </ul>
+
+              {/* Custom Quote Link Card */}
+              <Link href="#contact" className="block">
+                <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-6 rounded-lg border border-gray-600 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:border-accent-gold/50">
+                  <p className="text-gray-300 text-center">
+                    Need the whole card to yourself? <span className="text-accent-gold font-semibold hover:text-yellow-400 transition-colors">Get a custom quote.</span>
                   </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Ideal for seasonal promotions</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Great for multi-page content</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                      <span>Professional finish and quality</span>
-                    </li>
-                  </ul>
-                  <Button className="bg-primary hover:bg-primary/90 text-white mt-4">
-                    Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
                 </div>
+              </Link>
+
+              {/* Dynamic Glow CTA Button */}
+              <Button asChild className="w-full bg-gradient-to-r from-primary to-red-700 hover:from-red-700 hover:to-primary text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-glow-pulse">
+                <Link href="#pricing">
+                  View Pricing <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Alternative Size Reference Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="alt-size-card group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-lg border border-gray-700 hover:border-accent-gold/50 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+              <div className="text-center">
+                <h4 className="text-lg font-bold text-white mb-2">6×11 Compact</h4>
+                <p className="text-gray-400 text-sm mb-4">Efficient & focused messaging</p>
+                <div className="w-16 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded mx-auto"></div>
               </div>
-            </TabsContent>
-          </Tabs>
+              <div className="overlay absolute inset-0 bg-gradient-to-t from-accent-gold/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                <span className="text-white font-semibold text-sm">Great for EDDM®</span>
+              </div>
+            </div>
+
+            <div className="alt-size-card group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-lg border border-gray-700 hover:border-accent-gold/50 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+              <div className="text-center">
+                <h4 className="text-lg font-bold text-white mb-2">15×12 Tabloid</h4>
+                <p className="text-gray-400 text-sm mb-4">Maximum visual impact</p>
+                <div className="w-20 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded mx-auto"></div>
+              </div>
+              <div className="overlay absolute inset-0 bg-gradient-to-t from-accent-gold/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                <span className="text-white font-semibold text-sm">Max Print Area</span>
+              </div>
+            </div>
+
+            <div className="alt-size-card group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-lg border border-gray-700 hover:border-accent-gold/50 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+              <div className="text-center">
+                <h4 className="text-lg font-bold text-white mb-2">11×17 Directory</h4>
+                <p className="text-gray-400 text-sm mb-4">Seasonal campaigns</p>
+                <div className="w-12 h-16 bg-gradient-to-br from-gray-600 to-gray-700 rounded mx-auto"></div>
+              </div>
+              <div className="overlay absolute inset-0 bg-gradient-to-t from-accent-gold/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                <span className="text-white font-semibold text-sm">Perfect for Events</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
