@@ -20,7 +20,7 @@ export function FaqAccordion() {
     {
       question: "What's included with my ad?",
       answer:
-        "Your ad includes professional design assistance, high-quality printing on premium stock, and distribution to your target area. Additionally, all 9x12-inch ads include 3,000 bonus flyers delivered directly to you for further marketing efforts. We also ensure your business category is exclusive, meaning no competitors will appear in the same mailing.",
+        "Your ad includes professional design assistance, high-quality printing on premium stock, and distribution to your target area. Additionally, all 9x12-inch ads include 3,000 bonus flyers distributed to up to 30 local businesses, laundromats, coffee shops, medical waiting rooms etc. We also ensure your business category is exclusive, meaning no competitors will appear in the same mailing.",
     },
     {
       question: "What is your refund policy?",

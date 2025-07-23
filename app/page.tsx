@@ -328,7 +328,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-lg font-medium mb-6">
-              All 9x12 ads include 3,000 flyers delivered directly to you for further outreach.
+              All 9×12 ads include 3,000 flyers distributed to up to 30 locations such as laundromats, coffee shops, medical and dental waiting rooms to expand your exposure.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
               <Link href="#contact">Get Started Today</Link>
@@ -473,7 +473,7 @@ export default function Home() {
               <p className="text-xl">
                 Refer a business and earn cash bonuses with NO LIMIT on referrals! Get paid for every business you bring to our co-op.
               </p>
-              
+
               <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-lg shadow-lg mb-6">
                 <h3 className="text-2xl font-bold mb-4 text-center">REFERRAL BONUS!</h3>
                 <div className="space-y-2 text-lg font-semibold">
@@ -514,7 +514,7 @@ export default function Home() {
                     <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
                       3
                     </span>
-                    <span>Apply your credit to your next direct mail campaign</span>
+                    <span>Apply your credit to your next direct mail campaign, or take a cash payout — your choice.</span>
                   </li>
                 </ol>
               </div>
@@ -540,7 +540,7 @@ export default function Home() {
               {
                 title: "Eye-Catching Offers",
                 description:
-                  "Use bold promotions like BOGO, $500 off, or Free Service Calls to grab attention immediately.",
+                  "Use bold promotions like BOGO, deep discounts, or up to $500 off depending on the project — great for service and construction businesses. Free Service Calls also work well to grab immediate attention.",
                 icon: <Award className="h-10 w-10 text-accent-gold" />,
               },
               {
@@ -596,7 +596,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
             <p className="text-xl leading-relaxed">
-              Pikes Peak Community Co-op is a Colorado Springs–based direct mail collective helping local businesses
+              Pikes Peak Community Co-op is a Colorado Springs–based direct mail cooperative helping local businesses
               grow without competing for ad space. We believe in shared success, bold design, and maximum mailbox
               impact.
             </p>

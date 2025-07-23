@@ -15,21 +15,21 @@ export function CampaignPackages() {
         },
         {
           title: "3-Card Campaign",
-          description: "Build awareness with a quarterly presence",
-          features: ["3 distributions", "5% discount on total", "Consistent visibility", "Quarterly scheduling"],
+          description: "Build awareness across multiple distributions",
+          features: ["3 distributions", "Increased exposure", "Flexible campaign length", "Upgradeable if larger cards are available"],
           icon: <Calendar className="h-10 w-10 text-primary" />,
         },
         {
           title: "6-Card Campaign",
-          description: "Maintain steady presence throughout half the year",
-          features: ["6 distributions", "10% discount on total", "Bi-monthly scheduling", "Enhanced brand recognition"],
+          description: "Maintain strong presence with half-year coverage",
+          features: ["6 distributions", "Upgrade opportunities to larger cards", "Better exposure than standalone", "Ideal for consistent market presence"],
           icon: <Calendar className="h-10 w-10 text-primary" />,
           popular: true,
         },
         {
           title: "12-Card Campaign",
-          description: "Maximum exposure with monthly distributions",
-          features: ["12 distributions", "15% discount on total", "Monthly scheduling", "Maximum brand presence"],
+          description: "Year-round presence with max exposure potential",
+          features: ["12 distributions", "Most visibility", "Ideal for long-term branding", "Can adapt card size based on availability"],
           icon: <Calendar className="h-10 w-10 text-primary" />,
         },
       ].map((plan, i) => (

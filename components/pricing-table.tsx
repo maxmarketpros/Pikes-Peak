@@ -8,10 +8,10 @@ export function PricingTable() {
         {
           title: "Large Ad",
           dimensions: "4\" x 6\"",
-          price: "$850",
-          originalPrice: "$900",
+          price: "$900",
+          originalPrice: "",
           deposit: "$300 deposit",
-          multiCardDiscount: "$50 OFF with multi-card",
+          multiCardDiscount: "$50 OFF with multi-card — $850",
           features: [
             "Premium placement",
             "Maximum visibility", 
@@ -23,30 +23,30 @@ export function PricingTable() {
         {
           title: "Medium Ad",
           dimensions: "3\" x 4\"",
-          price: "$425",
-          originalPrice: "$450",
+          price: "$475",
+          originalPrice: "",
           deposit: "$200 deposit",
-          multiCardDiscount: "$25 OFF with multi-card",
+          multiCardDiscount: "$25 OFF with multi-card — $450",
           features: ["Great visibility", "Effective size", "Professional design assistance", "Affordable option"],
           popular: false,
         },
         {
           title: "Small Ad",
           dimensions: "3\" x 2\"",
-          price: "$225",
-          originalPrice: "$250",
+          price: "$250",
+          originalPrice: "",
           deposit: "$100 deposit",
-          multiCardDiscount: "$25 OFF with multi-card",
+          multiCardDiscount: "$25 OFF with multi-card — $225",
           features: ["Budget-friendly", "Professional design assistance", "Targeted distribution", "Quick turnaround"],
           popular: false,
         },
         {
           title: "Directory Ad",
           dimensions: "3/4\" x 3\"",
-          price: "$115",
-          originalPrice: "$125",
+          price: "$125",
+          originalPrice: "",
           deposit: "Pay in full",
-          multiCardDiscount: "$10 OFF with multi-card",
+          multiCardDiscount: "$10 OFF with multi-card — $115",
           features: [
             "Seasonal availability",
             "Professional design assistance",
@@ -65,7 +65,7 @@ export function PricingTable() {
             <p className="text-lg font-medium text-primary mb-3">{plan.dimensions}</p>
             <div className="mb-4">
               <div className="text-3xl font-bold">{plan.price}</div>
-              <p className="text-sm line-through text-muted-foreground">{plan.originalPrice}</p>
+              {plan.originalPrice && <p className="text-sm line-through text-muted-foreground">{plan.originalPrice}</p>}
               <p className="text-muted-foreground text-sm mt-1">{plan.deposit}</p>
               <div className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium mt-2">
                 {plan.multiCardDiscount}
