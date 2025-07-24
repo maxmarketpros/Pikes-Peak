@@ -31,7 +31,7 @@ export default function BlogPage() {
         {/* Elfsight Blog Widget */}
         <div className="max-w-6xl mx-auto px-4 py-16">
           <div 
-            className="elfsight-app-68c1d67f-2a92-4414-8ad6-e5345925a16a" 
+            className="elfsight-app-3f2035f4-4b0d-4a50-bd6e-8cc4aebe36a1" 
             data-elfsight-app-lazy
           />
         </div>
